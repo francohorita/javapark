@@ -1,13 +1,13 @@
-package entidades;
+package entities;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Booking {
-	Facility facility;
-	LocalDateTime bookTime;
-	Visitor visitor;
+	private Facility facility;
+	private LocalDateTime bookTime;
+	private Visitor visitor;
     
 	public Booking(Facility facility, LocalTime bookTime, Visitor visitor) {
 		this.facility = facility;

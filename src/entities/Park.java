@@ -1,4 +1,4 @@
-package entidades;
+package entities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class Park {
-	
+
 	//SINGLETON</
 	private static Park instance = null;
 	

@@ -1,6 +1,5 @@
-package entidades;
+package entities;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.IntSummaryStatistics;
 import java.util.List;
@@ -9,8 +8,8 @@ import java.util.stream.Stream;
 public class Utilities {
 	
 	
-	public static <T extends Facility> void setGenericCapacity(T buffer, Integer n) {
-		buffer.setCapacity(n);
+	public static <T extends Facility> void setGenericCapacity(T buffer, Integer capacity) {
+		buffer.setCapacity(capacity);
 	}
 	
 	public static void statistics(Park myPark) throws ParkException {
@@ -18,22 +17,21 @@ public class Utilities {
 		games = myPark.getGames();
 		
 		if(games.isEmpty())
-			throw new ParkException("No se encontraron juegos en el parque");
+			throw new ParkException("No games found");
 		
-		//3 Juegos menor demora
-		Stream<Game> juegosLimitedStream = games.stream().sorted().limit(3);
-		juegosLimitedStream.forEach(System.out::println);
+		//3 Game with less delay
+		Stream<Game> limitedGamesStream = games.stream().sorted().limit(3);
+		limitedGamesStream.forEach(System.out::println);
 		
 		consoleDivider();
 		
-		//Promedio demora juegos (y más datos)
-		IntSummaryStatistics parkStatics = 
+		IntSummaryStatistics parkStatics =
 				games.stream()
 				.mapToInt(j -> j.getDelay())
 				.summaryStatistics();
 		
 		System.out.printf(
-			" Número de juegos = %d \n Juego con menor demora = %d \n Juego con mayor demora %d \n Promedio de demora = %f \n", 
+			" Games = %d \n Game with less delay = %d \n Game with greater delay = %d \n Average delay = %f \n",
             parkStatics.getCount(), parkStatics.getMin(), parkStatics.getMax(), parkStatics.getAverage());
 		
 	}

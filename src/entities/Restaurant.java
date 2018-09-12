@@ -1,28 +1,26 @@
-package entidades;
+package entities;
 
 public class Restaurant implements Facility {
 
 	@Override
-	public void book(Integer cant, Integer hora, Integer usuario) {
-		// TODO Auto-generated method stub
-		
+	public void book(Integer cant, Integer hora, Integer user) {
+		// TODO
 	}
 
 	public Integer getDelay() {
-		return 30;
+		// TODO
+		return 10;
 	}
 
 	public void closeFacility() {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 	public void closeFacility(Integer delay) {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 	
-	public void setCapacity(Integer capacidad) {
+	public void setCapacity(Integer capacity) {
 		// TODO Auto-generated method stub
 		
 	}

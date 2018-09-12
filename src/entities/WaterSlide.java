@@ -1,10 +1,11 @@
-package entidades;
+package entities;
 
 public class WaterSlide extends Game {
 
-	public WaterSlide(String name, Integer delay) {
+	public WaterSlide(String name, Integer delay, Integer requiredAge) {
 		this.name = name;
 		this.delay = delay;
+		this.requiredAge = requiredAge;
 	}
 
 	public Integer getDelay() {
@@ -12,17 +13,11 @@ public class WaterSlide extends Game {
 	}
 
 	public void closeFacility() {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 	public void closeFacility(Integer delay) {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
-	
-	public Integer getRequiredAge() {
-		return 20;
-	}	
 
 }

@@ -1,34 +1,31 @@
-package entidades;
+package entities;
 
 public class Toilet implements Facility {
 
 	@Override
 	public void book(Integer cant, Integer hora, Integer usuario) {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 	public Integer getDelay() {
+		// TODO
 		return 20;
 	}
 
 	public void closeFacility() {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
 	public void closeFacility(Integer delay) {
-		// TODO Auto-generated method stub
-		
+		// TODO
 	}
 
-	public void setCapacity(Integer capacidad) {
-		// TODO Auto-generated method stub
-		
+	public void setCapacity(Integer capacity) {
+		// TODO
 	}
 
 	public Integer getCapacity() {
-		// TODO Auto-generated method stub
+		// TODO
 		return null;
 	}
 

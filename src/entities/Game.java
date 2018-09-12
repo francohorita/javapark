@@ -1,4 +1,4 @@
-package entidades;
+package entities;
 
 public abstract class Game implements Facility, Comparable<Game> {
 	
@@ -7,11 +7,10 @@ public abstract class Game implements Facility, Comparable<Game> {
 	private Integer capacity;
 	private Integer duration;
 	protected String name;
-	protected Integer requiredAge;
 	protected Integer delay;
+	protected Integer requiredAge;
 	
 	public Game() {}
-	
 	
 	public Park getPark() {
 		return park;
@@ -30,7 +29,7 @@ public abstract class Game implements Facility, Comparable<Game> {
 	}
 
 	public Integer getRequiredAge() {
-		return 10;
+		return requiredAge;
 	}
 	
 	public int compareTo(Game g) {
@@ -39,12 +38,11 @@ public abstract class Game implements Facility, Comparable<Game> {
 
 	@Override
 	public String toString() {
-		return "Juego [parqueId=" + parkId + ", parque=" + park + ", capacidad=" + capacity + ", duracion="
-				+ duration + ", nombre=" + name + ", edadMinima=" + requiredAge + ", demora=" + delay + "]";
+		return "Game [name=" + name + ", requiredAge=" + requiredAge + ", delay=" + delay + "]";
 	}
 	
-	public void book(Integer cant, Integer hora, Integer usuario) {
-		
+	public void book(Integer quant, Integer hour, Integer user) {
+		// TODO
 	}
 	
 }
